@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3</title>
+</head>
+<body>
+    <script>      const alunos = [
+        { nome: 'Diogo', media: 5.5 },
+        { nome: 'Julia', media: 9.5 },
+        { nome: 'Roberto', media: 1.5 },
+        { nome: 'Tiago', media: 6.0 }
+      ];
+
+      function alunosAprovados(alunos, media){
+        const aprovados = alunos.filter(aluno => {
+          return aluno.media > media;
+        })
+
+        return aprovados;
+      }
+
+      console.log(alunosAprovados(alunos, 6.5));
+
+    </script>
+</body>
+</html>

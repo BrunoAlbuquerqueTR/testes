@@ -1,0 +1,1 @@
+Para rodar e necessari o npm request
