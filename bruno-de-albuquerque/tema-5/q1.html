@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questão 1</title>
+</head>
+<body>
+    <script>
+     class Produto {
+        constructor(qtdEstoque, nome, tamanho, cor, preco){
+          this.qtdEstoque = qtdEstoque;
+          this.nome = nome;
+          this.tamanho = tamanho;
+          this.cor = cor;
+          this.preco = preco;
+        }
+
+        vender(){
+            this.qtdEstoque += -1;
+        }
+
+        static info(produto){
+          return (`
+           Quantidade Estoque: ${produto.qtdEstoque},
+           Nome: ${produto.nome},
+           Tamanho: ${produto.tamanho},
+           Cor: ${produto.cor}, 
+           Preço: ${produto.preco}
+           `);
+        }
+
+      }
+      let nintendo64 = new Produto(5, 'nintendo64', '120', 'verde', '200');
+      nintendo64.vender();
+      Produto.info(nintendo64);
+   </script>
+</body>
+</html>

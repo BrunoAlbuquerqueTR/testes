@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+              const lista = [
+        { nome: 'Tânia', escola: 'Alguma Escola' },
+        { nome: 'Emilly', escola: 'Alguma Escola' },
+        { nome: 'Vitória', escola: 'Alguma Escola 2' },
+        { nome: 'Erick', escola: 'Alguma Escola' }
+    ]
+
+      function buscaescolas(lista) {
+          return lista.some(e => e.escola === 'Alguma Escola 2');
+      }
+
+      console.log(buscaescolas(lista));
+    </script>
+</body>
+</html>

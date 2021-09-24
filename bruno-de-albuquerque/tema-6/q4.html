@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 4</title>
+</head>
+<body>
+    <script>
+           const lista = [
+        { nome: 'Tânia', sobrenome: 'Cardoso', idade: 65 },
+        { nome: 'Emilly', sobrenome: 'Barbosa', idade: 46 },
+        { nome: 'Vitória', sobrenome: 'Costa', idade: 83 },
+        { nome: 'Erick', sobrenome: 'Ferreira', idade: 16 }
+      ]
+
+      function procurar (propriedade, valor, lista) {
+         const buscarnalista = lista.find(buscarPessoa => buscarPessoa[propriedade] === valor);
+         return buscarnalista;
+      }
+
+      console.log(procurar('nome', 'Tânia', lista));   
+    </script>
+</body>
+</html>

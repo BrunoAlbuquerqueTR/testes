@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questão 2</title>
+</head>
+<body>
+    <script>
+
+    'use strict';
+
+function buscaArquivoNoSistema(nomeArquivo) {
+    return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            console.log('buscou o arquivo' + nomeArquivo);
+
+            resolve(nomeArquivo);
+        }, 300);
+    });
+}
+
+function salvaArquivoNoServidor(urlServico, arquivo) {
+    urlServico = urlServico || 'www.api.com';
+    return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            if (!arquivo) return reject('arquivo não existe');
+            console.log('salvou no servidor' + urlServico);
+
+            resolve(urlServico);
+        }, 300);
+    });
+}
+
+var somaMultiplosNumeros = function somaMultiplosNumeros() {
+    for (var _len = arguments.length, numerosArray = Array(_len), _key = 0; _key < _len; _key++) {
+        numerosArray[_key] = arguments[_key];
+    }
+
+    return numerosArray.reduce(function (acumulador, numeroAtual) {
+        return acumulador + numeroAtual;
+    });
+};
+
+// chama os serviços de buscar arquivo e salva no servidor 
+function handlerArquivo() {
+    buscaArquivoNoSistema('teste1', function (err, arquivo) {
+        if (!err) salvaArquivoNoServidor('www.google.com', arquivo, function (err, sucesso) {
+            if (!err) {
+                console.log(sucesso);
+            }
+        });
+    });
+}
+var name = "marcelo";
+var father = {
+    name: name,
+    friendsFather: ['João', 'Maria'],
+    olaAmigos: function olaAmigos() {
+        this.friendsFather.map(function (value) {
+            console.log(this.name + " conhece " + value);
+        });
+    }
+};
+
+function Pessoa(nome, idade) {
+    this.nome = nome;
+    this.idade = idade;
+}
+</script>
+
+</body>
+</html>
