@@ -1,1 +1,1 @@
-Repositorio com teste .
+Repositorio com exercicios  .
